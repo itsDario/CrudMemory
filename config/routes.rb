@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   get '/', to: 'application#home'
   get '/sign_up', to: 'user#new'
+  post'/users', to: 'user#create'
+  get'/login', to: 'sessions#new'
+  post'/login', to: 'sessions#create'
   get '/users', to: 'user#index'
   get '/play', to: 'game#index'
 end
