@@ -14,8 +14,8 @@ class SessionsController < ApplicationController
       end
     end
 
-  def destory
-  session[:user_id].destroy
+  def destroy
+  session.destroy
   redirect_to '/'
   end
 

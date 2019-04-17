@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   get '/loseScreen', to: 'game#lose_screen'
   post '/play', to: 'game#create'
   get '/newgame', to: 'game#new'
+  get'/logout', to: 'sessions#destroy'
 end
