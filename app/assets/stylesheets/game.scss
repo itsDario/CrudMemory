@@ -1,3 +1,29 @@
-div {
-    color: red;
+displayBox {
+    width: 100px;
+    height: 100px;
+    // grid-template-columns: ;
+    // grid-template-rows: <track-size> ... | <line-name> <track-size> ...;
+}
+
+// .bstat1 {
+//     background-color: red;
+// }
+
+// .bstat0 {
+//     background-color: whitesmoke;
+// }
+
+.checkContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.checkContainer input {
+    height: 100%;
+    width: 100%;
+}
+
+.checkContainer input label {
+    height: 100%;
+    width: 100%;
 }

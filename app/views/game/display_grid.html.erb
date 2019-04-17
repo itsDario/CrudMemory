@@ -1,8 +1,30 @@
 <p>Score: <%= @gridNums.length %></p>
-<% @gridNums.each do |gridNum| %>
-    <div id='gameGrid' >
-        <div class="displaySquare <%= gridNum %>"><%= gridNum %></div>
-    </div>
-<% end %>
 
-<%= link_to "I'm ready", '/recall' %>
+<style>
+    #gameGrid {
+    display: grid;
+    width: 900px;
+    height: 900px;
+    grid-template-columns: repeat(<%= @gridSize %>, <%= 900/@gridSize %>px);
+    grid-template-rows: repeat(<%= @gridSize %>, <%= 900/@gridSize %>px);
+    /* background-color: rgb(60, 255, 0); */
+}
+.displayBox img{
+    width: 100%;
+}
+</style>
+
+<div id='gameGrid' >
+    <% @gridNums.each do |gridNum| %>
+        <div style="" class="displayBox bstat<%= gridNum.to_s %>">
+        
+            <% if gridNum == 1 %>
+                <%= image_tag "checkedbox.png"%>
+            <% else %>
+                <%= image_tag "uncheckbox.png" %>
+            <% end %>
+        </div>
+    <% end %>
+</div>
+
+<span><%= link_to "I'm ready", '/recall' %></span>

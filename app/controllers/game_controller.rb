@@ -22,6 +22,7 @@ class GameController < ApplicationController
   end
 
   def display_grid # display the boxes in the grid
+    # @imageSize = 900 / @gridSize
     @gridNums = []
     @gridSize = session['grid_size']
     (@gridSize * @gridSize).times { @gridNums << rand(2) }
@@ -30,6 +31,7 @@ class GameController < ApplicationController
 
   def input_grid # display empty grid to be filled by user
     @gridNums = session['gridNums']
+    @gridSize = session['grid_size']
   end
 
   def recall_submit # checked the submitted grid against the original
@@ -40,16 +42,15 @@ class GameController < ApplicationController
     if guess == gridNums # fowards them back to the display grid
       session['grid_size'] = session['grid_size'] += 1
       redirect_to '/learn'
-      byebug
     else # foward them to the lose screen
       # Score.create(user_id: this, #leaderboard, score: session['gridSize'])
       redirect_to '/loseScreen'
-      byebug
     end
   end
 
   def lose_screen # if guessed incorrectly tell them their score
     @score = session['grid_size']**2
+    # create user
   end
 
   def fixGuess(theGuess) # needed cause weird form issues

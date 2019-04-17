@@ -1,10 +1,24 @@
 Game
 
+<style>
+    #gameGrid {
+    display: grid;
+    width: 900px;
+    height: 900px;
+    grid-template-columns: repeat(<%= @gridSize %>, <%= 900/@gridSize %>px);
+    grid-template-rows: repeat(<%= @gridSize %>, <%= 900/@gridSize %>px);
+    /* background-color: rgb(60, 255, 0); */
+}
+</style>
 <p>Score: <%= @gridNums.length %></p>
+
 <%= form_tag "/recall_submit" do %>
-        <div id='content' >
+        <div id='gameGrid' >
         <% @gridNums.length.times do %>
-            <%= check_box('game', 'guess', {:multiple => true},1, 0) %>
+            <label class="checkContainer">
+              <%= check_box('game', 'guess', {:multiple => true},1, 0) %>
+              <span class="checkmark"></span>
+            </label>
         <% end %>
         </div>
     <%= submit_tag "Submit Guess" %>
