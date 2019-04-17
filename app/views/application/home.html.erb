@@ -1,4 +1,7 @@
 <h1> C.R.U.D MEMORY</h1>
+<% if session[:user_id]%>
+<%= print "someone is logged in"%>
+<%end%>
 
 <%= link_to 'Regester Here to play', '/sign_up' %>
 <%= link_to '(while logged on) PLAY', '/play' %>
