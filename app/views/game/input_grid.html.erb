@@ -1,0 +1,13 @@
+Game
+
+<p>Score: <%= @gridNums.length %></p>
+<%= form_tag "/recall_submit" do %>
+        <div id='content' >
+        <% @gridNums.length.times do %>
+            <%= check_box('game', 'guess', {:multiple => true},1, 0) %>
+        <% end %>
+        </div>
+    <%= submit_tag "Submit Guess" %>
+<% end %>
+    
+

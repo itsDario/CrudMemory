@@ -8,5 +8,10 @@ Rails.application.routes.draw do
   get '/', to: 'application#home'
   get '/sign_up', to: 'user#new'
   get '/users', to: 'user#index'
-  get '/play', to: 'game#index'
+  get '/learn', to: 'game#display_grid'
+  get '/recall', to: 'game#input_grid'
+  post '/recall_submit', to: 'game#recall_submit'
+  get '/loseScreen', to: 'game#lose_screen'
+  post '/play', to: 'game#create'
+  get '/newgame', to: 'game#new'
 end

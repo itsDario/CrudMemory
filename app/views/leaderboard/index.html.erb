@@ -1,0 +1,5 @@
+LEADERBOARD
+
+<% Score.all.each do |score| %>
+<p><%= score.user.name %>: <%= score %>
+<% end %>

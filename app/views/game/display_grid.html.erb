@@ -1,0 +1,8 @@
+<p>Score: <%= @gridNums.length %></p>
+<% @gridNums.each do |gridNum| %>
+    <div id='gameGrid' >
+        <div class="displaySquare <%= gridNum %>"><%= gridNum %></div>
+    </div>
+<% end %>
+
+<%= link_to "I'm ready", '/recall' %>
