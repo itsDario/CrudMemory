@@ -1,5 +1,5 @@
 LEADERBOARD
 
-<% Score.all.each do |score| %>
-<p><%= score.user.name %>: <%= score %>
+<% @sorted_scores.all.each do |score| %>
+<p><%= score.user.name %>: <%= score.score %>
 <% end %>

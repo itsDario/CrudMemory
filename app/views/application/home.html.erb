@@ -1,7 +1,14 @@
-<h1> C.R.U.D MEMORY</h1>
-<% if session[:user_id]%>
-<%= print "someone is logged in"%>
-<%end%>
 
-<%= link_to 'Regester Here to play', '/sign_up' %>
-<%= link_to '(while logged on) PLAY', '/play' %>
+<%= image_tag("dario.jpg",class: "dario")%>
+<div class="home-links">
+<% if session[:user_id] != nil%>
+<%= "someone is logged in"%>
+<%= button_to 'PLAY' , '/newgame', id: "white",method: 'get' %>
+<%# <%= content_tag :p,"|"%>
+<%= button_to ' log out', '/logout',id: "white",method: 'get'  %>
+<%else%>
+<%= button_to 'Register Here to play ', '/sign_up',id: "white",method: 'get'  %>
+<%# <%= content_tag :p,"|"%>
+<%= button_to ' Log in', '/login',id: "white",method: 'get' %>
+<%end%>
+</div>

@@ -9,8 +9,10 @@ class ApplicationController < ActionController::Base
   #       flash[:notice] = @user.errors.full_messages
   # end
 
-  # def self.logged_in
-  #   session[:user_id].exists?
-  # end
+  def check_if_logged_in
+  unless session[:user_id].exists?
+    redirect_to '/'
+  end
+end
 
 end

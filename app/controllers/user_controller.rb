@@ -13,9 +13,9 @@ class UserController < ApplicationController
     new_user_with_params
     if @user.save
       session[:user_id] = @user.id
-      redirect_to 'application#home'
+      redirect_to '/'
     else
-      flash_errors
+      # flash_errors
       render'new'
     end
   end
@@ -29,7 +29,7 @@ class UserController < ApplicationController
         flash[:notice] = "You have successfully updated your account!"
         render'application#home'
       else
-        flash_errors
+        # flash_errors
         render'edit'
     end
   end
@@ -37,14 +37,14 @@ class UserController < ApplicationController
   def destroy
     @user.destory
     flash[:notice] = "You have deleted your account"
-    render 'application#home'
+    render '/'
   end
 
 
 private
 
   def strong_params
-    params.require(:user).permit(:username,:password,:password_confirmation)
+    params.require(:user).permit(:username,:password,:confirmation)
   end
 
   def new_user
