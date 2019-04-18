@@ -11,7 +11,7 @@
       <ol>
         <% @scores.each do |score|%>
       <li>
-        <%="#{score.score} (#{score.leaderboard.difficulty})"%> <%= button_to "delete score", method: 'delete', value: score.id%>
+        <%="#{score.score} (#{score.leaderboard.difficulty})"%> <%= button_to "delete score", method: 'delete', value: score.id, id: 'deleteScore'%>
       </li>
       <%end%>
     </ol>

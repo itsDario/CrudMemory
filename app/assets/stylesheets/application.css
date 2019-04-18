@@ -36,6 +36,12 @@ h2 {
   font-size: 250%;
 }
 
+.button_to input {
+  color: white;
+  background-color: Dodgerblue;
+  font-size: 80%;
+}
+
 #white {
   color: white;
   background-color: Dodgerblue;
@@ -126,6 +132,4 @@ input {
   font-size: 220%
 }
 
-.parent-div {
-
-}
+.parent-div {}
