@@ -1,6 +1,9 @@
-<% @sorted_scores.each do |score| %>
-<p class="home">
-<%= score.user.username %>
-: <%= score.score %>
-: <%= score.leaderboard.difficulty %></p>
-<% end %>
+<ol class='wholeBoard'>
+    <% 10.times do |position| %>
+        <li class="leaderEntry">
+        <%= @sorted_scores[position].user.username %>
+        : <%= @sorted_scores[position].score %>
+        : <%= @sorted_scores[position].leaderboard.difficulty %></li>
+    <% end %>
+
+</ol>
