@@ -14,10 +14,18 @@
  *= require_self
  */
 
+<<<<<<< HEAD
+ #white {
+   color:white;
+   background-color: Dodgerblue;
+   font-size:150%;
+ }
+=======
 #white {
   color: white;
   background-color: Dodgerblue;
 }
+>>>>>>> 4d096e9c6dd8c0d6167a47be47bebaf37ae1f1dc
 
 h2 {
   color: Dodgerblue;
