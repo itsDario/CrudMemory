@@ -1,5 +1,6 @@
 <% if @user%>
+<%byebug%>
 <% @user.errors.full_messages.each do |message|%>
-<%= message %>
+<%=content_tag :p,message %>
 <%end%>
 <%end%>

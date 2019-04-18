@@ -4,14 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-        @user = User.find_by(username: params[:username])
-      # unless @user.username == nil || @user.username.empty?
-      if  authenticate
-        redirect_to '/'
+    @user = User.find_by(username: params[:username])
+    if @user && authenticate
+      redirect_to'/'
       else
         render'new'
-      end
+      flash[:notice]="Username or Password is invalid"
     end
+  end
 
   def destroy
   session.destroy
