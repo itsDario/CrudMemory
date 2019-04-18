@@ -23,7 +23,16 @@ displayBox {
     width: 100%;
 }
 
-.checkContainer input label {
-    height: 100%;
-    width: 100%;
+.right_box {
+    position: absolute;
+    top: 45%;
+    right: 20%;
+    height: 500px;
+    width: 500px;
+}
+
+.right_box h6,
+.right_box input,
+.right_box a {
+    font-size: 400%;
 }

@@ -1,12 +1,10 @@
-<p>Score: <%= @gridNums.length %></p>
-
 <style>
     #gameGrid {
     display: grid;
-    width: 900px;
-    height: 900px;
-    grid-template-columns: repeat(<%= @gridSize %>, <%= 900/@gridSize %>px);
-    grid-template-rows: repeat(<%= @gridSize %>, <%= 900/@gridSize %>px);
+    width: 600px;
+    height:600px;
+    grid-template-columns: repeat(<%= @gridSize %>, <%= 600/@gridSize %>px);
+    grid-template-rows: repeat(<%= @gridSize %>, <%= 600/@gridSize %>px);
     /* background-color: rgb(60, 255, 0); */
 }
 .displayBox img{
@@ -27,4 +25,7 @@
     <% end %>
 </span>
 
-<span><%= link_to "I'm ready", '/recall' %></span>
+<span class='right_box'>
+<%= link_to "I'm ready", '/recall' %>
+<h6>Score: <%= @gridNums.length %></h6>
+</span>
