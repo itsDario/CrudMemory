@@ -2,7 +2,7 @@
 
 class UserController < ApplicationController
 
-  before_action :check_for_user, :except [:new,:create]
+  before_action :check_for_user, except: [:new,:create]
 
 
   def new
