@@ -14,11 +14,11 @@ class GameController < ApplicationController
 
   def create
     session['difficulty'] = params[:difficulty]
-    if params[:difficulty] == 'easy'
+    if params[:difficulty] == 'Easy'
       session['grid_size'] = 3
-    elsif params[:difficulty] == 'medium'
+    elsif params[:difficulty] == 'Med'
       session['grid_size'] = 4
-    elsif params[:difficulty] == 'hard'
+    elsif params[:difficulty] == 'Hard'
       session['grid_size'] = 5
     end
     redirect_to '/learn'
@@ -47,12 +47,17 @@ class GameController < ApplicationController
       redirect_to '/learn'
     else # foward them to the lose screen
       # Score.create(user_id: this, #leaderboard, score: session['gridSize'])
+      session['guess'] = guess
+      session['original'] = gridNums
       redirect_to '/loseScreen'
     end
   end
 
   def lose_screen # if guessed incorrectly tell them their score
-    @score = (session['grid_size']**2)
+    @lastGuess = session['guess']
+    @original = session['original']
+    @gridSize = session['grid_size']
+    @score = @lastGuess.length
     @user = User.find(session['user_id'])
     @leaderboard = Leaderboard.find_by(difficulty: session['difficulty'])
     Score.create(leaderboard_id: @leaderboard.id, user_id: @user.id, score: @score)
