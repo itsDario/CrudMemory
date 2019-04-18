@@ -14,29 +14,33 @@
  *= require_self
  */
 
- #fucking-edit{
-   font-size: 200%;
-   text-decoration: underline;
- }
+#fucking-edit {
+  font-size: 200%;
+  text-decoration: underline;
+}
 
- .blue-text, h2 {
-   font-size: 100%;
- }
- .edit-form{
-   text-align: left;
-   font-size: 150%;
- }
- .edit{
-   color: white;
-   background-color: Dodgerblue;
-   font-size: 250%;
- }
+.blue-text,
+h2 {
+  font-size: 100%;
+}
+
+.edit-form {
+  text-align: left;
+  font-size: 150%;
+}
+
+.edit {
+  color: white;
+  background-color: Dodgerblue;
+  font-size: 250%;
+}
 
 #white {
   color: white;
   background-color: Dodgerblue;
   font-size: 150%;
 }
+
 .profile-div {
   /* margin: auto; */
   margin-bottom: 1%;
@@ -44,11 +48,13 @@
   width: 25%;
 
 }
+
 .profile {
   font-size: 700%;
   color: Dodgerblue;
   text-decoration: underline;
 }
+
 .blue-text {
   color: Dodgerblue;
 }
@@ -115,8 +121,8 @@ input {
   width: 30%;
   position: relative;
   top: -440px;
-  left:750px;
+  left: 750px;
   font-size: 220%
 }
-.parent-div{
-}
+
+.parent-div {}

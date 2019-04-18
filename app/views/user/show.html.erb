@@ -5,14 +5,13 @@
 <%= button_to "Edit #{@user.username}", '/edit', method: 'get', class: 'edit'%>
 </div>
 <div class ="scores">
-    <% if @scores == nil %>
+    <% if @scores.length < 1 %>
       <%=content_tag :p,"You have no scores, play a game 👍", class:'blue-text'%>
     <% else %>
-     <%byebug%>
       <ol>
-        <% @user.leaderboards.each do |score|%>
+        <% @scores.each do |score|%>
       <li>
-        <%=score%>
+        <%= score.score %>
       </li>
       <%end%>
     </ol>

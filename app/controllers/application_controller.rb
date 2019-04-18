@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-
-  def home;
-    unless session[:user_id].nil?
-      set_user
-    end
+  def home
+    set_user unless session[:user_id].nil?
   end
 
    def test_user
@@ -23,7 +20,6 @@ class ApplicationController < ActionController::Base
     @user && BCrypt::Password.new(@user.password_digest) == params[:password]
       session[:user_id] = @user.id
     else
-      byebug
       false
     end
   end
