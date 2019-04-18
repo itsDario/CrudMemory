@@ -1,7 +1,19 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  def home; end
+
+  def home;
+    @user= User.find(session[:user_id])
+  end
+
+  def set_user
+    @user = User.find(session[:user_id])
+  end
+
+  def authenticate
+    @user && BCrypt::Password.new(@user.password_digest) == params[:password]
+      session[:user_id] = @user.id
+    end
 
   # def flash_errors
   #       flash[:notice] = @user.errors.full_messages

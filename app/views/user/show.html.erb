@@ -1,0 +1,21 @@
+<div class="parent-div">
+<div class="profile-div">
+<%= content_tag :h1,@user.username, class: 'profile'%>
+<%= image_tag 'deadpool.jpg'%><br>
+<%= button_to "Edit #{@user.username}", '/edit', method: 'get', class: 'edit'%>
+</div>
+<div class ="scores">
+    <% if @scores == nil %>
+      <%=content_tag :p,"You have no scores, play a game 👍", class:'blue-text'%>
+    <% else %>
+     <%byebug%>
+      <ol>
+        <% @user.leaderboards.each do |score|%>
+      <li>
+        <%=score%>
+      </li>
+      <%end%>
+    </ol>
+    <%end%>
+</div>
+<div>

@@ -20,14 +20,21 @@ class UserController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(session[:user_id])
+  end
+
+
   def edit
     set_user
   end
 
   def update
-    if @user.update(strong_params)
+    set_user
+    if authenticate
+      @user.update(params.require(:user).permit(:username))
       flash[:notice] = 'You have successfully updated your account!'
-      render'application#home'
+      redirect_to'/'
     else
       # flash_errors
       render'edit'
@@ -54,7 +61,4 @@ class UserController < ApplicationController
     @user = User.new(strong_params)
   end
 
-  def set_user
-    @user = User.find(params[:id])
-  end
 end
