@@ -1,5 +1,42 @@
-<h1>You did not remember</h1>
+<h1></h1>
 <%# leaderboard rank %>
-<%= link_to "Try again?", '/newgame' %>
+
 <%# leaderboards %>
 <%# log_out %>
+
+<style>
+    #gameGrid {
+    display: grid;
+    width: 800px;
+    height:800px;
+    grid-template-columns: repeat(<%= @gridSize %>, <%= 800/@gridSize %>px);
+    grid-template-rows: repeat(<%= @gridSize %>, <%= 800/@gridSize %>px);
+    /* background-color: rgb(60, 255, 0); */
+}
+.displayBox img{
+    width: 100%;
+}
+</style>
+
+<span id='gameGrid' >
+    <% @lastGuess.each_with_index do |gridNum, i| %>
+        <div style="" class="displayBox bstat<%= gridNum.to_s %>">
+        
+            <% if gridNum == 1 && gridNum == @original[i] %>
+                <%= image_tag "checkedbox.png"%>
+            <% elsif gridNum == 0 && gridNum == @original[i]%>
+                <%= image_tag "uncheckbox.png" %>
+            <% elsif gridNum == 1 && gridNum != @original[i] %>
+                <%= image_tag "wrong.png" %>
+            <% else %>
+                <%= image_tag "wrongB.png" %>
+            <% end %>
+        </div>
+    <% end %>
+</span>
+
+<span class='right_box'>
+<%= link_to "Try again?", '/newgame' %>
+<%= link_to "Leaderboard", '/leaderboard' %>
+<h6>Score: <%= @score %></h6>
+</span>

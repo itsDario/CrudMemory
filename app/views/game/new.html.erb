@@ -2,6 +2,7 @@
 
 <div class='difficultySelectionBox'>
 <p>Select Difficulty</p>
+<%# Dont change the difficulty label breaks like 2 things %>
 <%= button_to "Easy", '/play', method: :post, name: "difficulty", id: "white" %>
 <%= button_to "Med", '/play', method: :post, name: "difficulty", id: "white" %>
 <%= button_to "Hard", '/play', method: :post, name: "difficulty", id: "white" %>
