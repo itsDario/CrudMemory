@@ -1,5 +1,5 @@
 <ol class='wholeBoard'>
-    <% 10.times do |position| %>
+    <% @max_positions.times do |position| %>
         <li class="leaderEntry">
         <%= @sorted_scores[position].user.username %>
         : <%= @sorted_scores[position].score %>
