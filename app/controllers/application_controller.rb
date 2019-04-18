@@ -3,7 +3,9 @@
 class ApplicationController < ActionController::Base
 
   def home;
-    @user= User.find(session[:user_id])
+    if session[:user_id].exists?
+      set_user
+    end
   end
 
   def set_user
