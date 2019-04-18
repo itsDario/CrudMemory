@@ -5,14 +5,24 @@ class ApplicationController < ActionController::Base
     set_user unless session[:user_id].nil?
   end
 
+   def test_user
+     @user.nil?
+   end
+
   def set_user
     @user = User.find(session[:user_id])
   end
 
   def authenticate
+    byebug
+    unless test_user
+      byebug
     @user && BCrypt::Password.new(@user.password_digest) == params[:password]
-    session[:user_id] = @user.id
+      session[:user_id] = @user.id
+    else
+      false
     end
+  end
 
   # def flash_errors
   #       flash[:notice] = @user.errors.full_messages
