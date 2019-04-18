@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class GameController < ApplicationController
-  # before_action :check_if_logged_in
+  before_action :check_for_user
 
   def index
     # gamecode

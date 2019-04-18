@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class UserController < ApplicationController
-  # def username; end
-  #
-  # def password_digest; end
+
+  before_action :check_for_user, :except [:new,:create]
+
 
   def new
     new_user

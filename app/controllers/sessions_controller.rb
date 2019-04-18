@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  before_action :check_for_user, only: [:destroy]
+
   def new
   end
 

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+
+
   def home
     set_user unless session[:user_id].nil?
   end
@@ -23,13 +25,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # def flash_errors
-  #       flash[:notice] = @user.errors.full_messages
-  # end
+  def check_for_user
+    if session[:user_id] == nil
+      redirect_to '/'
+    end
+  end
 
-  #   def check_if_logged_in
-  #   unless session[:user_id].exists?
-  #     redirect_to '/'
-  #   end
-  # end
 end
