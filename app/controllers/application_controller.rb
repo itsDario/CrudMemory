@@ -15,8 +15,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate
     byebug
-    unless test_user
-      byebug
+    unless test_userc
     @user && BCrypt::Password.new(@user.password_digest) == params[:password]
       session[:user_id] = @user.id
     else

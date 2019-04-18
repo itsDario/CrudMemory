@@ -2,16 +2,16 @@
 <div class="profile-div">
 <%= content_tag :h1,@user.username, class: 'profile'%>
 <%= image_tag 'deadpool.jpg'%><br>
-<%= button_to "Edit #{@user.username}", '/edit', method: 'get', class: 'edit'%>
+<%= button_to "Edit #{@user.username}", '/edit', method: 'get', id: 'edit'%>
 </div>
 <div class ="scores">
-    <% if @scores.length < 1 %>
+    <% if @scores.empty? %>
       <%=content_tag :p,"You have no scores, play a game 👍", class:'blue-text'%>
     <% else %>
       <ol>
         <% @scores.each do |score|%>
       <li>
-        <%= score.score %>
+        <%="#{score.score} (#{score.leaderboard.difficulty})"%> <%= button_to "delete score", method: 'delete', value: score.id%>
       </li>
       <%end%>
     </ol>

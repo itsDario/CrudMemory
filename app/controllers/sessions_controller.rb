@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       redirect_to'/'
       else
         render'new'
-      flash[:notice]="Username or Password is invalid"
+      flash[:notice] = "Username or Password is invalid"
     end
   end
 

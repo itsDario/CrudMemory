@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   get '/newgame', to: 'game#new'
   get '/logout', to: 'sessions#destroy'
   post'/edit', to: 'user#update'
+  post'/profile', to: 'score#destroy'
 end
