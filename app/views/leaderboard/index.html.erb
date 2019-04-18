@@ -1,5 +1,6 @@
-LEADERBOARD
-
-<% @sorted_scores.all.each do |score| %>
-<p><%= score.user.name %>: <%= score.score %>
+<% @sorted_scores.each do |score| %>
+<p class="home">
+<%= score.user.username %>
+: <%= score.score %>
+: <%= score.leaderboard.difficulty %></p>
 <% end %>

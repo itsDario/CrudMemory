@@ -1,5 +1,8 @@
-Selects Board Size
 
-<%= button_to "easy", '/play', method: :post, name: "difficulty" %>
-<%= button_to "medium", '/play', method: :post, name: "difficulty" %>
-<%= button_to "hard", '/play', method: :post, name: "difficulty" %>
+
+<div class='difficultySelectionBox'>
+<p>Select Difficulty</p>
+<%= button_to "easy", '/play', method: :post, name: "difficulty", id: "white" %>
+<%= button_to "medium", '/play', method: :post, name: "difficulty", id: "white" %>
+<%= button_to "hard", '/play', method: :post, name: "difficulty", id: "white" %>
+</div>
