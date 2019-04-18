@@ -31,8 +31,7 @@ class UserController < ApplicationController
 
   def update
     set_user
-    if authenticate
-      @user.update(params.require(:user).permit(:username))
+    if authenticate && @user.update(params.require(:user).permit(:username))
       flash[:notice] = 'You have successfully updated your account!'
       redirect_to'/'
     else
