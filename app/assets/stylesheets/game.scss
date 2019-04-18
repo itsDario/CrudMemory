@@ -16,6 +16,7 @@ displayBox {
 .checkContainer {
     height: 100%;
     width: 100%;
+    top: 0px;
 }
 
 .checkContainer input {
@@ -23,7 +24,37 @@ displayBox {
     width: 100%;
 }
 
-.checkContainer input label {
-    height: 100%;
-    width: 100%;
+.right_box {
+    position: absolute;
+    top: 45%;
+    right: 20%;
+    height: 500px;
+    width: 500px;
+    text-align: center;
+}
+
+.right_box h6,
+.right_box input,
+.right_box a {
+    font-size: 400%;
+    text-align: center;
+}
+
+.right_box a,
+.right_box input {
+    color: white;
+    background: dodgerblue;
+    border-radius: 30px;
+    padding: 10px;
+    margin: auto;
+}
+
+.difficultySelectionBox {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.difficultySelectionBox {
+    margin-top: 10%;
+    text-align: center;
 }

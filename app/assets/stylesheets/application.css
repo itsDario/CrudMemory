@@ -14,55 +14,73 @@
  *= require_self
  */
 
+<<<<<<< HEAD
  #white {
    color:white;
    background-color: Dodgerblue;
    font-size:150%;
  }
-
- h2 {
-   color: Dodgerblue;
- }
-
- .form {
-   text-align: center;
- }
-
-form, .button_to,  input {
-  border-radius: 12px;
+=======
+#white {
   color: white;
- }
+  background-color: Dodgerblue;
+}
+>>>>>>> 4d096e9c6dd8c0d6167a47be47bebaf37ae1f1dc
 
- .button_to {color:white}
-
-  .dario {
-    margin-bottom: 10px;
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-
- .home, p{
-    /* width: 50%; */
-    /* margin-left: 20%;
-    margin-right: 20%; */
-    margin-left: auto;
-    font-size: 250%;
-    color:white;
-    text-align: center;
-    background-color: Dodgerblue;
-    /* border-radius: 12px; */
-    border-width: 50%;
+h2 {
+  color: Dodgerblue;
 }
 
- .home-links{
-   width: 100%;
-   height: 100;
-   color: white;
-   text-align: center;
-   }
+.form {
+  text-align: center;
+}
 
-  form, .button_to, input {
-  color:black;
+form,
+.button_to,
+input {
+  border-radius: 12px;
+  color: white;
+}
+
+.button_to {
+  color: white
+}
+
+.dario {
+  margin-bottom: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.home {
+  /* width: 50%; */
+  /* margin-left: 20%;
+    margin-right: 20%; */
+  margin-left: auto;
+  font-size: 250%;
+  color: white;
+  text-align: center;
+  background-color: Dodgerblue;
+  /* border-radius: 12px; */
+  border-width: 50%;
+}
+
+.home :hover {
+  color: white;
+
+}
+
+.home-links {
+  width: 100%;
+  height: 100;
+  color: white;
+  text-align: center;
+}
+
+form,
+.button_to,
+input {
+  color: black;
   display: inline;
   border-width: thin;
   margin-left: 10px;

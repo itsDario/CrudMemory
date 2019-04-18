@@ -16,7 +16,7 @@ class UserController < ApplicationController
       redirect_to '/'
     else
       # flash_errors
-      render'new'
+      render 'new'
     end
   end
 
@@ -25,26 +25,25 @@ class UserController < ApplicationController
   end
 
   def update
-      if @user.update(strong_params)
-        flash[:notice] = "You have successfully updated your account!"
-        render'application#home'
-      else
-        # flash_errors
-        render'edit'
-    end
+    if @user.update(strong_params)
+      flash[:notice] = 'You have successfully updated your account!'
+      render'application#home'
+    else
+      # flash_errors
+      render'edit'
+  end
   end
 
   def destroy
     @user.destory
-    flash[:notice] = "You have deleted your account"
+    flash[:notice] = 'You have deleted your account'
     render '/'
   end
 
-
-private
+  private
 
   def strong_params
-    params.require(:user).permit(:username,:password,:password_confirmation)
+    params.require(:user).permit(:username, :password, :password_confirmation)
   end
 
   def new_user
@@ -58,5 +57,4 @@ private
   def set_user
     @user = User.find(params[:id])
   end
-
 end
