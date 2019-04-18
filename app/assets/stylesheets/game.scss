@@ -54,7 +54,9 @@ displayBox {
     text-align: center;
 }
 
-.difficultySelectionBox {
-    margin-top: 10%;
-    text-align: center;
+.button_to #white,
+.difficultySelectionBox p {
+    font-size: 600%;
+    padding-left: 40px;
+    padding-right: 40px;
 }
