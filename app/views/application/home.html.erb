@@ -4,13 +4,12 @@
 <div class="home-links">
 <% if session[:user_id] != nil%>
 <%= button_to 'Play' , '/newgame', id: "white",method: 'get' %>
-<%# <%= content_tag :p,"|"%>
-<%= button_to ' Log Out', '/logout',id: "white",method: 'get'  %>
-<%= button_to ' Profile', '/profile',id: "white",method: 'get'  %>
-<%else%>
-<%= button_to 'Register', '/sign_up',id: "white",method: 'get'  %>
-<%# <%= content_tag :p,"|"%>
-<%= button_to ' Log in', '/login',id: "white",method: 'get' %>
-<%end%>
 <%= button_to 'Scores' , '/leaderboard', id: "white",method: 'get' %>
+<%= button_to ' Profile', '/profile',id: "white",method: 'get'  %>
+<%= button_to ' Log Out', '/logout',id: "white",method: 'get'  %>
+<%else%>
+<%= button_to ' Log in', '/login',id: "white",method: 'get' %>
+<%= button_to 'Register', '/sign_up',id: "white",method: 'get'  %>
+<%= button_to 'Scores' , '/leaderboard', id: "white",method: 'get' %>
+<%end%>
 </div>

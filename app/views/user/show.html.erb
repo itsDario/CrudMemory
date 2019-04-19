@@ -1,20 +1,25 @@
-<div class="parent-div">
+<div class="whole-profile-div">
 <div class="profile-div">
 <%= content_tag :h1,@user.username, class: 'profile'%>
 <%= image_tag 'deadpool.jpg'%><br>
-<%= button_to "Edit #{@user.username}", '/edit', method: 'get', id: 'edit'%>
+<%= button_to "Edit #{@user.username}", '/edit', method: 'get', class: 'profileEditButton'%>
 </div>
 <div class ="scores">
     <% if @scores.empty? %>
       <%=content_tag :p,"You have no scores, play a game 👍", class:'blue-text'%>
     <% else %>
-      <ol>
+      <ul>
         <% @scores.each do |score|%>
       <li>
-        <%="#{score.score} (#{score.leaderboard.difficulty})"%> <%= button_to "delete score", method: 'delete', value: score.id, id: 'deleteScore'%>
+        <span>
+        <%="#{score.score} (#{score.leaderboard.difficulty})"%> 
+        </span>
+        <span>
+        <%= button_to "delete score", method: 'delete', value: score.id%>
+        </span>
       </li>
       <%end%>
-    </ol>
+    </ul>
     <%end%>
 </div>
 <div>
