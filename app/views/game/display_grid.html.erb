@@ -11,25 +11,26 @@
     width: 100%;
 }
 </style>
-
+<div class='boardPage'>
 <span id='gameGrid' >
     <% @gridNums.each do |gridNum| %>
-        <div style="" class="displayBox bstat<%= gridNum.to_s %>">
-        
+        <div class="checkComtainer">
             <% if gridNum == 1 %>
-                <%= image_tag "checkedbox.png"%>
+                <%= image_tag "checkedbox.png", class: 'checkImage' %>
             <% else %>
-                <%= image_tag "uncheckbox.png" %>
+                <%= image_tag "uncheckbox.png", class: 'checkImage'  %>
             <% end %>
         </div>
     <% end %>
 </span>
 
 <span class='right_box'>
-<%= link_to "I'm ready", '/recall' %>
+<h6>Remember This</h6>
+<p><%= link_to "I'm ready", '/recall' %></p>
 <h6>Score: <%= @gridNums.length %></h6>
 </span>
 
 
 
-<span id='top_right_box'>Remember This</span>
+<span id='top_right_box'></span>
+</div>

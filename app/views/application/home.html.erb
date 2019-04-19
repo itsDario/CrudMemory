@@ -3,7 +3,6 @@
 </div>
 <div class="home-links">
 <% if session[:user_id] != nil%>
-<%= "Welcome back #{@user.username}"%>
 <%= button_to 'Play' , '/newgame', id: "white",method: 'get' %>
 <%# <%= content_tag :p,"|"%>
 <%= button_to ' Log Out', '/logout',id: "white",method: 'get'  %>

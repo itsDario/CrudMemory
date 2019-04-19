@@ -14,14 +14,33 @@
  *= require_self
  */
 
+.home {
+  text-align: center;
+  background-color: Dodgerblue;
+  color: white;
+  /* border-radius: 12px; */
+}
+
+.home a {
+  font-size: 8em;
+  color: white;
+}
+
+.home a:hover {
+  color: white;
+}
+
+.dario {
+  text-align: center;
+  margin: 3% auto;
+}
 
 #fucking-edit {
   font-size: 200%;
   text-decoration: underline;
 }
 
-.blue-text,
-h2 {
+.blue-text {
   font-size: 100%;
 }
 
@@ -70,58 +89,27 @@ h2 {
   text-align: center;
 }
 
-form,
-.button_to,
-input {
+.button_to {
   border-radius: 12px;
   color: white;
 }
 
-.button_to {
-  color: white
-}
-
-.dario {
-  margin-bottom: 10px;
-  margin-left: 35%;
-  margin-right: auto;
-}
-
-.home {
-  /* width: 50%; */
-  /* margin-left: 20%;
-    margin-right: 20%; */
-  margin-left: auto;
-  font-size: 250%;
+.button_to :hover {
   color: white;
-  text-align: center;
-  background-color: Dodgerblue;
-  /* border-radius: 12px; */
-  border-width: 50%;
-}
-
-.home :hover {
-  color: white;
-
+  text-decoration: underline;
 }
 
 .home-links {
   width: 100%;
-  height: 100;
+  height: 100%;
   color: white;
   text-align: center;
 }
 
-form,
-.button_to,
-input {
-  color: black;
+.home-links form {
+  border: none;
   display: inline;
-  border-width: thin;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
-
+  margin: 15px;
 }
 
 .scores {
@@ -131,5 +119,3 @@ input {
   left: 750px;
   font-size: 220%
 }
-
-.parent-div {}

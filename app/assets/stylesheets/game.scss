@@ -1,57 +1,31 @@
-displayBox {
-    width: 100px;
-    height: 100px;
-    // grid-template-columns: ;
-    // grid-template-rows: <track-size> ... | <line-name> <track-size> ...;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-// .bstat1 {
-//     background-color: red;
-// }
-
-// .bstat0 {
-//     background-color: whitesmoke;
-// }
-
-.checkContainer {
-    height: 100%;
-    width: 100%;
-    top: 0px;
+.boardPage {
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 100%;
 }
 
-.checkContainer input {
-    height: 100%;
+.checkImage {
     width: 100%;
+    height: 100%;
 }
 
 .right_box {
-    position: absolute;
-    top: 45%;
-    right: 20%;
-    height: 500px;
-    width: 500px;
+    grid-column-start: 2;
+    height: 100%;
+    width: 100%;
     text-align: center;
-}
-
-#top_right_box {
-    position: absolute;
-    top: 20%;
-    right: 6%;
-    height: 200px;
-    width: 800px;
-    text-align: center;
-    font-size: 5em;
-}
-
-#try_again {
-    color: white;
 }
 
 .right_box h6,
-.right_box input,
 .right_box a {
     font-size: 400%;
-    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20%;
 }
 
 .right_box a,
@@ -60,12 +34,26 @@ displayBox {
     background: dodgerblue;
     border-radius: 30px;
     padding: 10px;
-    margin: auto;
+}
+
+.right_box input {
+    font-size: 400%;
+    padding: 5px;
+    border: none;
+}
+
+.right_box p a:hover {
+    color: white;
 }
 
 .difficultySelectionBox {
-    margin-top: 10%;
     text-align: center;
+    width: 100%;
+}
+
+.difficultySelectionBox form {
+    display: inline;
+    margin: 15px;
 }
 
 .button_to #white,
@@ -74,11 +62,4 @@ displayBox {
     font-size: 600%;
     padding-left: 40px;
     padding-right: 40px;
-}
-
-#leaderA {
-    position: absolute;
-    top: 180px;
-    right: 65px;
-    color: white;
 }

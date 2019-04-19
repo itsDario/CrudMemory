@@ -1,0 +1,28 @@
+<div class='boardPage'>
+    <div class='dario'>
+        <%= image_tag("dario.jpg")%>
+    </div>
+    <div class="right_box">
+        <% if session[:user_id] != nil%>
+            <p>
+                <%= link_to 'Play' , '/newgame' %>
+            </p>
+            <p>
+                <%= link_to ' Log Out', '/logout' %>
+            </p>
+            <p>
+                <%= link_to ' Profile', '/profile' %>
+            </p>
+        <%else%>
+            <p>
+                <%= link_to 'Register', '/sign_up' %>
+            </p>
+            <p>
+                <%= link_to ' Log in', '/login' %>
+            </p>
+        <%end%>
+        <p>
+            <%= link_to 'Scores' , '/leaderboard' %>
+        </p>
+    </div>
+</div>

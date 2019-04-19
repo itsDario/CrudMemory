@@ -10,23 +10,16 @@
 }
 </style>
 
-
-<%= form_tag "/recall_submit" do %>
+<%= form_tag "/recall_submit", class: 'boardPage' do %>
     <div id='gameGrid' >
-    <% @gridNums.length.times do %>
-        <label class="checkContainer">
-          <%= check_box('game', 'guess', {:multiple => true},1, 0) %>
-          <span class="checkmark"></span>
-        </label>
-    <% end %>
+        <% @gridNums.length.times do %>
+            <%= check_box('game', 'guess', {:multiple => true, class: 'checkImage'},1, 0) %>
+        <% end %>
     </div>
     <span class='right_box'>
-        <%= submit_tag "Submit Guess" %>
+        <h6>Enter Checkmarks</h6>
+        <p><%= submit_tag "Submit" %></p>
         <h6>Score: <%= @gridNums.length %></h6>
     </span>
 <% end %>
     
-
-
-
-<span id='top_right_box'>Enter Checkmarks</span>

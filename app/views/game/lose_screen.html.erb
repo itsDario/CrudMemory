@@ -17,7 +17,7 @@
     width: 100%;
 }
 </style>
-
+<div class='boardPage'>
 <span id='gameGrid' >
     <% @lastGuess.each_with_index do |gridNum, i| %>
         <div style="" class="displayBox bstat<%= gridNum.to_s %>">
@@ -36,9 +36,9 @@
 </span>
 
 <span class='right_box'>
-<%= link_to "Try again?", '/newgame', id: 'try_again'%>
-<%= link_to "Leaderboard", '/leaderboard', id: 'leaderA' %>
+<h6>You did not remember</h6>
+<p><%= link_to "Try again?", '/newgame'%></p>
+<p><%= link_to "Leaderboard", '/leaderboard'%></p>
 <h6>Score: <%= @score %></h6>
 </span>
-
-<span id='top_right_box'>You did not remember</span>
+</div>
