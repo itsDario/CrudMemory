@@ -2,8 +2,7 @@
     <% @max_positions.times do |position| %>
         <li class="leaderEntry">
         <%= @sorted_scores[position].user.username %>
-        : <%= @sorted_scores[position].score %>
-        : <%= @sorted_scores[position].leaderboard.difficulty %></li>
+        : <%= @sorted_scores[position].score %></li>
     <% end %>
 
 </ol>

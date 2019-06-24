@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_04_15_201209) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "leaderboards", force: :cascade do |t|
     t.string "difficulty"
     t.datetime "created_at", null: false
