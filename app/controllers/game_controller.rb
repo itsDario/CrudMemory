@@ -60,7 +60,7 @@ class GameController < ApplicationController
     @score = @lastGuess.length
     @user = User.find(session['user_id'])
     @leaderboard = Leaderboard.find_by(difficulty: session['difficulty'])
-    Score.create(leaderboard_id: @leaderboard.id, user_id: @user.id, score: @score)
+    Score.create(leaderboard_id: 1, user_id: @user.id, score: @score)
   end
 
   def fixGuess(theGuess) # needed cause weird form issues

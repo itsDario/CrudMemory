@@ -12,7 +12,7 @@
         <% @scores.each do |score|%>
       <li>
         <span>
-        <%="#{score.score} (#{score.leaderboard.difficulty})"%> 
+        <%="#{score.score} Points"%> 
         </span>
         <span>
         <%= button_to "delete score", method: 'delete', value: score.id%>
