@@ -17,7 +17,7 @@
     development:
       adapter: postgresql
       encoding: unicode
-      database: CrudMemory_development
+      database: crudmemory_development
       pool: 5
       username: 
       password:
@@ -47,7 +47,7 @@
     test:
       adapter: postgresql
       encoding: unicode
-      database: CrudMemory_test
+      database: crudmemory_test
       pool: 5
       username: 
       password:
