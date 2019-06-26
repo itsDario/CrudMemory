@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'user/password_digest'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get '/', to: 'application#home'
+  root 'application#home'
+  # get '/', to: 'application#home'
   get '/sign_up', to: 'user#new'
   post'/sign_up', to: 'user#create'
   get '/login', to: 'sessions#new'
